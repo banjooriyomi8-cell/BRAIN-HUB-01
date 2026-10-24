@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #101828;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > div {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00d4ff;
+}
+
+main {
+    width: 85%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #101828;
+}
+
+h2 {
+    color: #1d4ed8;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #101828, #1d4ed8);
+    color: white;
+    padding: 80px 40px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 50px;
+}
+
+.hero h2 {
+    color: white;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #00d4ff;
+    color: #101828;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card a {
+    color: #1d4ed8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.about-section {
+    background-color: white;
+    padding: 35px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.about-section ul {
+    padding-left: 25px;
+}
+
+.about-section li {
+    margin-bottom: 12px;
+}
+
+.service {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-left: 5px solid #1d4ed8;
+    border-radius: 8px;
+}
+
+article {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+article h2 {
+    margin-bottom: 15px;
+}
+
+article a {
+    color: #1d4ed8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+form {
+    background-color: white;
+    padding: 35px;
+    max-width: 650px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background-color: #1d4ed8;
+    color: white;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #101828;
+}
+
+footer {
+    background-color: #101828;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+}
+
+footer h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}
