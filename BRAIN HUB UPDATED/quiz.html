@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Brain Hub — think, learn, and grow through quizzes, brain teasers, hidden facts, and motivation.">
+  <title>Brain Hub | Quiz Battle</title>
+  <link rel="stylesheet" href="quiz.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Brain Hub home">
+      <span class="brand-icon">🧠</span>
+      <span><strong>BRAIN <b>HUB</b></strong><small>Think · Learn · Grow</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="quiz.html" class="active">Quiz Battle</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch theme">☀️ / 🌙</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">WELCOME TO</p>
+        <h1>Brain Hub <span>Quiz Battle</span></h1>
+        <p>Challenge your brain. Test your knowledge.<br>See how well you know the world!</p>
+        <a class="primary-btn hero-btn" href="#brain-battle">Start a challenge <span>→</span></a>
+      </div>
+      <div class="brain-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <span class="big-brain">🧠</span><span class="spark spark-one">✦</span>
+        <span class="spark spark-two">?</span><span class="spark spark-three">💡</span>
+        <p>Small questions...<br><b>Big thinking!</b></p>
+      </div>
+    </section>
+
+    <section class="dashboard" id="brain-battle">
+      <aside class="sidebar panel" id="features">
+        <div class="side-item selected"><span>🏆</span><div><strong>Quiz Battle</strong><small>Test your knowledge</small></div></div>
+        <a class="side-item" href="#brain-battle"><span>💡</span><div><strong>Daily Brain Teaser</strong><small>A new puzzle every day</small></div></a>
+        <button class="side-item side-button" id="fact-btn" type="button"><span>🔎</span><div><strong>Hidden Facts</strong><small>Discover the unexpected</small></div></button>
+        <a class="side-item" href="#motivation"><span>😄</span><div><strong>Jokes & Fun</strong><small>Laugh. Relax. Recharge</small></div></a>
+        <a class="side-item" href="#motivation"><span>⛰️</span><div><strong>Motivation</strong><small>Fuel your dreams</small></div></a>
+        <p class="sidebar-note">A sharper mind builds a brighter future.</p>
+      </aside>
+
+      <section class="quiz-panel panel">
+        <div class="quiz-heading">
+          <div class="mini-brain">🧠</div>
+          <div class="heading-text"><h2>Brain Hub Quiz Battle</h2><p id="quiz-progress">Ready when you are · 50 questions</p></div>
+          <div class="progress-wrap"><div class="progress-track"><div id="progress-bar"></div></div><small id="score-live">Score: 0</small></div>
+        </div>
+
+        <div id="welcome-screen" class="welcome-card">
+          <div class="welcome-icon">⚡</div>
+          <h3>Ready to challenge your brain?</h3>
+          <p>Answer 50 questions across General Knowledge, Science, Mathematics, Logic, and Brain Teasers.</p>
+          <div class="setup-row">
+            <label for="category-select">Choose a category</label>
+            <select id="category-select">
+              <option value="All">All categories (50 questions)</option>
+              <option value="General Knowledge">General Knowledge</option>
+              <option value="Science">Science</option>
+              <option value="Mathematics">Mathematics</option>
+              <option value="Logic">Logic</option>
+              <option value="Brain Teasers">Brain Teasers</option>
+            </select>
+          </div>
+          <button class="primary-btn" id="start-btn" type="button">Start Quiz <span>→</span></button>
+        </div>
+
+        <div id="question-screen" class="question-card" hidden>
+          <div class="question-top"><span class="question-number" id="question-number">1</span><div><p class="eyebrow" id="category-label">GENERAL KNOWLEDGE</p><h3 id="question-text">Question goes here</h3></div></div>
+          <div id="options" class="options"></div>
+          <div id="answer-feedback" class="feedback" aria-live="polite"></div>
+          <div class="question-actions"><span id="answer-count">Choose one answer</span><button class="primary-btn" id="next-btn" type="button" disabled>Next Question →</button></div>
+        </div>
+
+        <div id="result-screen" class="result-card" hidden>
+          <div class="result-icon">🎉</div><p class="eyebrow">CHALLENGE COMPLETE</p>
+          <h3 id="final-score">Your score: 0/50</h3><p id="result-message"></p>
+          <div class="result-stats"><div><strong id="correct-count">0</strong><small>Correct</small></div><div><strong id="wrong-count">0</strong><small>Incorrect</small></div><div><strong id="percentage">0%</strong><small>Accuracy</small></div></div>
+          <button class="primary-btn" id="play-again-btn" type="button">Play Again ↻</button>
+        </div>
+      </section>
+
+      <aside class="rightbar">
+        <div class="panel score-card"><div class="trophy">🏆</div><div><small>Your Score</small><strong id="score-card">0 / 50</strong></div></div>
+        <div class="panel leaderboard"><h3>📊 Your Session</h3><p class="muted">Your results update as you answer.</p><div class="leader-row"><span>Questions answered</span><strong id="answered-stat">0</strong></div><div class="leader-row"><span>Correct answers</span><strong id="correct-stat">0</strong></div><div class="leader-row"><span>Remaining</span><strong id="remaining-stat">50</strong></div><p class="note">This is a local demo leaderboard panel. Online rankings require a database.</p></div>
+        <div class="panel quote-card" id="motivation"><span>“</span><p id="quote-text">The more you learn, the more you realize how much you don't know.</p><small>— Brain Hub</small></div>
+        <div class="panel fact-card" id="fact-card" hidden><strong>🔎 Hidden fact</strong><p id="fact-text"></p></div>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="index.html"><span class="brand-icon">🧠</span><span><strong>BRAIN <b>HUB</b></strong><small>Think · Learn · Grow</small></span></a>
+    <div><p>Join our community and keep your brain active!</p><small>© <span id="year"></span> Brain Hub. Keep thinking, learning, and growing.</small></div>
+    <a href="#home" class="back-top">Back to top ↑</a>
+  </footer>
+</body>
+</html>
